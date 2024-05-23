@@ -13,9 +13,17 @@
 .logobg {
   font-size: $xll;
   span {
-    font-size: 50px;
+    font-size: 700px;
   }
 }
+
+.logo{
+  img{
+    width:56px ;
+    margin-right: 10px;
+  }
+}
+
 .titleSm {
   font-size: $xl-3;
   font-weight: 500;
@@ -61,7 +69,7 @@
 }
 .heading-title {
   text-align: center;
-  max-width: 65%;
+  max-width: 70%;
   margin: auto;
   padding-top: $xll-3;
   padding-bottom: $xl-4;

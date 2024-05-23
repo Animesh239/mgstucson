@@ -12,20 +12,20 @@ const Hero = () => {
     <>
       <section className='hero'>
         <div className='container'>
-          <TitleLogo title='creative' caption='7' className='logobg' />
-          <h1 className='hero-title'>WE BUILD DIGITAL EXPERIENCES</h1>
+          <TitleLogo title='Master Geotech Services Pvt Ltd' caption='7' className='logobg' />
+          <h1 className='hero-title'>Providing Innovative Solutions</h1>
 
           <div className='sub-heading'>
-            <TitleSm title='WEBSITES' /> <span>.</span>
-            <TitleSm title='BRANDING' /> <span>.</span>
-            <TitleSm title='DIGITAL MARKETING' />
+            <TitleSm title='CONSULTING' /> <span>.</span>
+            <TitleSm title='EDUCATION & TRAINING' /> <span>.</span>
+            <TitleSm title='AUTOMATION' />
           </div>
         </div>
       </section>
       <section className='hero-sec'>
         <div className='container'>
           <div className='heading-title'>
-            <Title title='The last digital agency you ll ever need' />
+            <Title title="Maximize yield, minimize risk. Your complete mining solution." />
             <p>Suspendisse ut magna porttitor, sollicitudin ligula at, molestie dolor. Vivamus a ligula ut velit placerat egestas at id leo. Nulla ac volutpat nunc. Nulla facilisi. Pellentesque tempus tellusut magna porttitor scelerisque.</p>
           </div>
           <div className='hero-content grid-4'>

@@ -18,8 +18,9 @@ const Header = () => {
       <header>
         <div className='container'>
           <div className='logo'>
-            <Link href='/'>
-              <TitleLogo title='creative' caption='7' className='logomin' />
+            <Link href='/' className="flex">
+              <img src="https://res.cloudinary.com/dh4qhdszo/image/upload/f_auto,q_auto/v1/mgstucson/judabg9vb8iglopwjo1e" alt="mgs" />
+              <TitleLogo title='MGS' caption='7' className='logomin' />
             </Link>
           </div>
           <nav className={open ? "openMenu" : "closeMenu"} onClick={() => setOpen(null)}>

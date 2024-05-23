@@ -1,13 +1,111 @@
-$indigo: #845aff;
-$white: #ffffff;
-$dark: #080e10;
-$green: #00dc93;
-$gradient: linear-gradient(203deg, rgba(192, 90, 255, 1) 0%, rgba(67, 39, 158, 1) 100%);
-$gradient2: linear-gradient(250deg, rgba(255, 85, 219, 1) 24%, rgba(52, 108, 255, 1) 100%);
+// 0
+
+
+// ========================================================
+
+
+// $indigo: #D0CECA; // Light blue from previous suggestions
+// $white: #ffffff;
+// $dark: #282828;  // Dark gray for dark mode
+
+// // Consider using a color palette generation tool for these 
+// // to ensure good contrast in dark mode
+// $green: #A97D62;  // Muted rose for dark mode
+// $gradient: linear-gradient(203deg, rgba(255, 140, 0, 1) 0%, rgba(153, 184, 147, 1) 100%); // Orange to teal gradient
+// $gradient2: linear-gradient(250deg, rgba(255, 179, 72, 1) 24%, rgba(0, 177, 255, 1) 100%); // Pink to blue gradient
+
+// .green {
+//   color: $green;
+// }
+
+// .indigo {
+//   color: $indigo;
+// }
+
+
+//============================================================
+
+
+// $indigo: #7D8C99; // Muted teal
+// $white: #ffffff;
+// $dark: #303030; // Dark charcoal gray
+
+// // Ensure good contrast between text color and background for readability
+// $green: #8A6950; // Deep muted rose
+// $gradient: linear-gradient(203deg, rgba(140, 117, 153, 1) 0%, rgba(85, 138, 115, 1) 100%); // Muted purple to muted green gradient
+// $gradient2: linear-gradient(250deg, rgba(204, 105, 82, 1) 24%, rgba(0, 136, 188, 1) 100%); // Muted orange to muted blue gradient
+
+// .green {
+//   color: $green;
+// }
+
+// .indigo {
+//   color: $indigo;
+// }
+
+
+//===================================================
+
+
+
+// $indigo: #C05B29; // Dark mustard yellow
+// $white: #ffffff;
+// $dark: #282828;  // Dark gray for dark mode
+
+// // Ensure good contrast between text color and background for readability (test these!)
+// $green: #6C8A73;  // Dark muted green
+// $gradient: linear-gradient(203deg, rgba(255, 114, 41, 1) 0%, rgba(102, 173, 115, 1) 100%); // Orange to muted green gradient
+// $gradient2: linear-gradient(250deg, rgba(255, 140, 0, 1) 24%, rgba(0, 217, 255, 1) 100%); // Orange to blue gradient
+
+// .green {
+//   color: $green;
+// }
+
+// .indigo {
+//   color: $indigo;
+// }
+
+// ==================================================================
+
+
+// $indigo: #2020e1; // Black
+// $white: #000000; // White
+// $dark: #ffffff;  // White (reversed for dark mode)
+
+// // Improved contrast for text (white on black)
+// $green: $white; 
+
+// $gradient: linear-gradient(203deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%); // Black to white gradient
+// $gradient2: linear-gradient(250deg, rgba(255, 165, 0, 1) 24%, rgba(0, 128, 255, 1) 100%); // Orange to blue gradient (adjusted for contrast)
+
+// .green {
+//   color: $green;
+// }
+
+// .indigo {
+//   color: $indigo;
+// }
+
+// ===========================================================================
+
+
+$indigo: #f96306; // Bright blue (main color)
+$white: #ffffff; // White (text color)
+$dark: #212529; // Dark gray (background for dark mode)
+
+// Consider adjusting for specific needs
+$green: #f58931; // Green accent (adjustable)
+
+$gradient: linear-gradient(203deg, rgb(21, 0, 255) 0%, rgb(255, 153, 0) 100%); // Blue to cyan gradient
+$gradient2: linear-gradient(250deg, rgb(255, 153, 0) 54%, rgb(54, 239, 165) 100%); // Orange to teal gradient
 
 .green {
   color: $green;
 }
+
 .indigo {
   color: $indigo;
 }
+
+
+

@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>MGS</title>
+        <title>Master Geotech Services Pvt Ltd</title>
       </Head>
       <Hero />
     </>
