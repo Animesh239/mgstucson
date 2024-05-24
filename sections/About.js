@@ -1,22 +1,24 @@
 import Banner from "@/components/Banner"
 import Brand from "@/components/Brand"
+import Srikant from "@/components/Srikant"
 import Testimonial from "@/components/Testimonial"
+
 import { Title, TitleSm } from "@/components/common/Title"
 
-const Agency = () => {
+const About = () => {
   return (
     <>
       <section className='agency bg-top'>
         <div className='container'>
           <div className='heading-title'>
-            <TitleSm title='ABOUT AGENCY' /> <br />
+            <TitleSm title='ABOUT MGS' /> <br />
             <br />
-            <Title title='The last digital agency you will ever need!' className='title-bg' />
+            <Title title='The last consultation you will ever need!' className='title-bg' />
           </div>
 
           <div className='content flex1'>
             <div className='left w-60 py'>
-              <TitleSm title='Turning your business ideas into smart digital products since 2001' />
+              <TitleSm title='Turning your business ideas into action since 2008' />
               <p className='desc-p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus eleifend magna, molestie iaculis sem pulvinar eu. Etiam non dui felis. Proin posuere dapibus magna laoreet posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim, sem eget sollicitudin tempor, libero velit aliquam enim, vel egestas tortor ante quis sem.</p>
               <div className='grid-3'>
                 <div className='box'>
@@ -62,4 +64,4 @@ const Agency = () => {
   )
 }
 
-export default Agency
+export default About

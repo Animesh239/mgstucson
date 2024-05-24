@@ -10,10 +10,10 @@ const Footer = () => {
         <div className='container'>
           <div className='grid-4'>
             <div className='logo'>
-              <TitleLogo title='creative' caption='7' className='logobg' />
+              <TitleLogo title='M G S' caption='7' className='logobg' />
               <br />
               <span>
-                Questions? Reach us <br /> Monday – Friday from 9 am to 6 pm
+                Questions? Reach us <br /> Monday – Saturday<br/> from 10 am to 6 pm
               </span>
               <br />
               <br />
@@ -24,7 +24,7 @@ const Footer = () => {
             <ul>
               <h3>COMPANY</h3>
               <li>
-                <Link href='/'>About agency</Link>
+                <Link href='/'>About Us</Link>
               </li>
               <li>
                 <Link href='/'>Our team</Link>
@@ -85,12 +85,12 @@ const Footer = () => {
           </div>
           <div className='legal connect py'>
             <div className='text'>
-              <span>© 2023 THE SEVEN. ALL RIGHTS RESERVED.</span>
+              <span>© 2024 MGS. ALL RIGHTS RESERVED.</span>
             </div>
             <div className='connect'>
-              <span>GORKCODER COMPANY</span>
+              <span>Made with 💜</span>
               <span> &nbsp; | &nbsp; </span>
-              <span>TERMS & CONDITIONS</span>
+              <span>Team MGS Intern</span>
             </div>
           </div>
         </div>
