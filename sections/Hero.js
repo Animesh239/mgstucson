@@ -26,7 +26,7 @@ const Hero = () => {
         <div className='container'>
           <div className='heading-title'>
             <Title title="Maximize yield, minimize risk. Your complete mining solution." />
-            <p>Suspendisse ut magna porttitor, sollicitudin ligula at, molestie dolor. Vivamus a ligula ut velit placerat egestas at id leo. Nulla ac volutpat nunc. Nulla facilisi. Pellentesque tempus tellusut magna porttitor scelerisque.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nihil ea esse impedit distinctio eos, deserunt numquam nobis nemo atque repudiandae. Aliquid praesentium explicabo ipsam nihil iure id. Pariatur magni soluta quisquam eos temporibus aut quibusdam quam, ipsam blanditiis. Veniam?</p>
           </div>
           <div className='hero-content grid-4'>
             {home.map((item, i) => (

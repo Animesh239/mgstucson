@@ -24,29 +24,72 @@ export const home = [
 export const expertise = [
   {
     id: 1,
-    title: "Web Design & Development",
+    title: "Mining & Civil Engineering Design",
     cover: "../images/e1.jpg",
-    desc: [{ text: "Web design" }, { text: "Web development" }, { text: "Custom icons & illustrations" }, { text: "Hosting" }, { text: "Website audit" }],
+    desc: [
+      { text: "Surface and underground excavation design" },
+      { text: "Stability analysis and evaluation" },
+      { text: "3D modeling and visualization" },
+      { text: "Permitting and regulatory compliance" },
+    ],
   },
   {
     id: 2,
-    title: "Digital Marketing",
+    title: "Mineral Resource Assessment",
     cover: "../images/e2.jpg",
-    desc: [{ text: "Social media marketing" }, { text: "Marketing campaigns" }, { text: "Markting management" }, { text: "SEO" }],
+    desc: [
+      { text: "Scoping studies for resource potential" },
+      { text: "Prefeasibility and feasibility studies" },
+      { text: "Geological and geotechnical analysis" },
+      { text: "Mineral reserve estimation and economic analysis" },
+    ],
   },
   {
     id: 3,
-    title: "E-Commerce",
+    title: "Mine Safety & Ventilation",
     cover: "../images/e3.jpg",
-    desc: [{ text: "E-Commerce website design" }, { text: "WooCommerce" }, { text: "Content management" }, { text: "Hosting" }],
+    desc: [
+      { text: "Ventilation system design and planning" },
+      { text: "Air quality monitoring and control" },
+      { text: "Safety audits and risk assessments" },
+      { text: "Emergency preparedness and response plans" },
+    ],
   },
   {
     id: 4,
-    title: "Branding & Creative Services",
+    title: "Mining Education & Training",
     cover: "../images/e4.jpg",
-    desc: [{ text: "Visual identity" }, { text: "Branding for social media" }, { text: "Custom illustrations" }],
+    desc: [
+      { text: "Mining operations and procedures training" },
+      { text: "Mine safety and health training" },
+      { text: "Geotechnical engineering training" },
+      { text: "Customized training programs" },
+    ],
   },
-]
+  {
+    id: 5,
+    title: "Automation Solutions",
+    cover: "../images/e1.jpg",
+    desc: [
+      { text: "Development of automated mining equipment" },
+      { text: "Data acquisition and analysis for automation" },
+      { text: "Integration of automation with existing systems" },
+      { text: "Safety and efficiency improvements through automation" },
+    ],
+  },
+  {
+    id: 6,
+    title: "Geotechnical Expertise",
+    cover: "../images/e2.jpg",
+    desc: [
+      { text: "Site investigation and characterization" },
+      { text: "Slope stability analysis and risk mitigation" },
+      { text: "Foundation design and analysis" },
+      { text: "Geotechnical monitoring and instrumentation" },
+    ],
+  },
+];
+
 export const testimonial = [
   {
     id: 1,
@@ -80,39 +123,39 @@ export const testimonial = [
 export const showcase = [
   {
     id: 1,
-    title: "Neon Lights",
+    title: "Open-Pit Mine Design",
     cover: "../images/s1.jpg",
-    catgeory: "DIGITAL MARKETING",
+    catgeory: "MINING ENGINEERING",
   },
   {
     id: 2,
-    title: "Futuristic Furniture",
-    catgeory: "WEBSITES",
+    title: "Underground Mine Development",
+    catgeory: "MINING ENGINEERING",
     cover: "../images/s2.jpg",
   },
   {
     id: 3,
-    title: "Smart Living",
+    title: "3D Mine Modeling",
     cover: "../images/s3.jpg",
-    catgeory: "WEBSITES",
+    catgeory: "GEOTECHNICAL SERVICES",
   },
   {
     id: 4,
-    title: "Light Painting",
+    title: "Ventilation System Design",
     cover: "../images/s4.jpg",
-    catgeory: "BRANDING	",
+    catgeory: "MINE SAFETY & HEALTH",
   },
   {
     id: 5,
-    title: "Ideabox",
+    title: "Automated Drilling Equipment",
     cover: "../images/s5.jpg",
-    catgeory: "BRANDING	",
+    catgeory: "AUTOMATION SOLUTIONS",
   },
   {
-    id: 5,
-    title: "VR Experience",
+    id: 6,
+    title: "Geotechnical Site Investigation",
     cover: "../images/s6.jpg",
-    catgeory: "WEBSITES	",
+    catgeory: "GEOTECHNICAL SERVICES",
   },
 ]
 export const brand = [
