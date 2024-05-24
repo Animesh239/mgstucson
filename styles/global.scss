@@ -9,20 +9,20 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 0%;
     left: 0%;
     width: 100%;
     height: 90vh;
     // background-image: url("../assets/images/art-top-cropp.jpg");
-    // background-image: url("https://i0.wp.com/fossilfuel.com/wp-content/uploads/2020/06/dominik-vanyi-F1B0-iuAxO4-unsplash-1.jpg?fit=4364%2C2910&ssl=1");
-    background-image: url("https://images.alphacoders.com/932/932679.jpg");
+    background-image: url("https://res.cloudinary.com/dh4qhdszo/image/upload/v1716559373/mgstucson/bvd5dvrzeh9lc1mglhlm.jpg");
     background-size: cover;
     background-position: center;
     z-index: -1;
     overflow-x: hidden !important;
+    opacity: 0.6;
   }
   .hero-title {
-    font-size: $xll-3;
+    font-size: $xll-2;
     line-height: 115px;
     font-weight: 600;
     margin: $xl-6 0;
@@ -32,6 +32,7 @@
     justify-content: center;
     .titleSm {
       margin: 0 $xl-1;
+      font-weight: 500;
     }
     span {
       font-size: $xll;

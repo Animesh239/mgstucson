@@ -13,3 +13,6 @@ export const TitleSm = ({ title }) => {
 export const Title = ({ title, className }) => {
   return <h1 className={`${className} title`}>{title}</h1>
 }
+export const TitleSa = ({ title }) => {
+  return <h3 className='titleSa'>{title}</h3>
+}

@@ -11,7 +11,8 @@
   }
 }
 .logobg {
-  font-size: $xll;
+  font-size: $xll-2;
+  -webkit-text-stroke: 2px white;
   span {
     font-size: 700px;
   }
@@ -24,10 +25,12 @@
   }
 }
 
-.titleSm {
-  font-size: $xl-3;
+.titleSa {
+  font-size: $xl;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  color: rgba($white, 0.5);
+  text-transform: uppercase;
 }
 .title {
   font-size: $xl-5;
@@ -41,6 +44,10 @@
 }
 .title-bg {
   font-size: 40px;
+}
+.title-sa {
+  font-size: 40px;
+  
 }
 .secondary-button,
 .button-primary {
@@ -69,13 +76,16 @@
 }
 .heading-title {
   text-align: center;
-  max-width: 70%;
+  max-width: 75%;
   margin: auto;
   padding-top: $xll-3;
   padding-bottom: $xl-4;
   p {
     margin: $xl-6 0;
     color: rgba($white, 0.5);
+    u {
+      color: $green;
+    }
   }
 }
 .card {
