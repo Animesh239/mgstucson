@@ -1,11 +1,11 @@
 import React from "react"
 import { Title } from "./common/Title"
-import { showcase } from "@/assets/data/dummydata"
+import { projects } from "@/assets/data/dummydata"
 import { Card } from "./common/Card"
 import Link from "next/link"
 import { HiOutlineArrowRight } from "react-icons/hi"
 
-const ShowCase = () => {
+const Projects = () => {
   return (
     <>
       <section className='showcase'>
@@ -14,7 +14,7 @@ const ShowCase = () => {
             <Title title='Selected Projects' />
           </div>
           <div className='hero-content grid-3 py'>
-            {showcase.map((item) => (
+            {projects.map((item) => (
               <Card data={item} key={item.id} />
             ))}
           </div>
@@ -29,4 +29,4 @@ const ShowCase = () => {
   )
 }
 
-export default ShowCase
+export default Projects

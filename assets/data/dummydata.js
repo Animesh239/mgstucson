@@ -120,7 +120,7 @@ export const testimonial = [
     desc: "Cras at ornare fermentum quam et tortor euismod, vel maximus metus tristique at ornare ex, quis fringilla tortor. Aenean semper neque quis consectetur lobortis. Quisque nec convallis ex. Aenean ut metus et nunc cursus aliquet.",
   },
 ]
-export const showcase = [
+export const projects = [
   {
     id: 1,
     title: "Open-Pit Mine Design",

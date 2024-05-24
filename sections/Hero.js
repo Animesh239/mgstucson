@@ -1,7 +1,7 @@
 import { home } from "@/assets/data/dummydata";
 import Banner from "@/components/Banner";
 import Expertise from "@/components/Expertise";
-import ShowCase from "@/components/ShowCase";
+import Projects from "@/components/Projects";
 import Srikant from "@/components/Srikant";
 import Testimonial from "@/components/Testimonial";
 import { Title, TitleLogo, TitleSm } from "@/components/common/Title";
@@ -62,7 +62,7 @@ const Hero = () => {
       <Expertise />
       <Banner />
       <Testimonial />
-      <ShowCase />
+      <Projects />
       <Brand />
 
       <div className="text-center">

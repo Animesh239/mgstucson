@@ -1,22 +1,22 @@
-import { showcase } from "@/assets/data/dummydata"
+import { projects } from "@/assets/data/dummydata"
 import { Card } from "@/components/common/Card"
 import { Title, TitleSm } from "@/components/common/Title"
 import React from "react"
 
-const ShowCase = () => {
+const Projects = () => {
   return (
     <>
       <section className='showcase bg-top'>
         <div className='container'>
           <div className='heading-title'>
-            <TitleSm title='SHOWCASE' /> <br />
+            <TitleSm title='PROJECTS' /> <br />
             <br />
             <Title title='Fresh ideas. Bold design. Smart realisation.' className='title-bg' />
           </div>
           <br />
           <br />
           <div className='grid-3'>
-            {showcase.map((item) => (
+            {projects.map((item) => (
               <Card data={item} key={item.id} caption={item.post} />
             ))}
           </div>
@@ -29,4 +29,4 @@ const ShowCase = () => {
   )
 }
 
-export default ShowCase
+export default Projects
