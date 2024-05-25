@@ -161,11 +161,11 @@ export const projects = [
 export const brand = [
   {
     id: 1,
-    cover: "../images/l1.svg",
+    cover: "../images/cojag.png",
   },
   {
     id: 2,
-    cover: "../images/l2.svg",
+    cover: "../images/natsol2.png",
   },
   {
     id: 3,
@@ -173,16 +173,16 @@ export const brand = [
   },
   {
     id: 4,
-    cover: "../images/l4.svg",
+    cover: "../images/enviro.png",
   },
-  {
-    id: 5,
-    cover: "../images/l5.svg",
-  },
-  {
-    id: 6,
-    cover: "../images/l6.svg",
-  },
+  // {
+  //   id: 5,
+  //   cover: "../images/l5.svg",
+  // },
+  // {
+  //   id: 6,
+  //   cover: "../images/l6.svg",
+  // },
 ]
 export const blogdata = [
   {
