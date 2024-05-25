@@ -17,44 +17,50 @@ const Footer = () => {
               </span>
               <br />
               <br />
-              <h3>+1 001 234 5678</h3>
+              <h3>+91-84848-75548</h3>
               <br />
               <button className='button-primary'>Request for quote</button>
             </div>
             <ul>
               <h3>COMPANY</h3>
               <li>
-                <Link href='/'>About Us</Link>
+                <Link href='/about'>About Us</Link>
               </li>
               <li>
-                <Link href='/'>Our team</Link>
+                <Link href='/team'>Our team</Link>
               </li>
               <li>
-                <Link href='/'>Showcase</Link>
+                <Link href='/projects'>Projects</Link>
               </li>
               <li>
-                <Link href='/'>Blog</Link>
+                <Link href='/blogs'>Blog</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href='/'>Demo design system</Link>
-              </li>
+              </li> */}
               <li>
-                <Link href='/'>Contact</Link>
+                <Link href='/contact'>Contact</Link>
               </li>
             </ul>
             <ul>
               <h3>SERVICES</h3>
               <li>
-                <Link href='/'>Web Design & Development</Link>
+                <Link href='/services#mining-and-civil-engg'>Mining & Civil Engineering Design</Link>
               </li>
               <li>
-                <Link href='/'>Branding & Creative Services</Link>
+                <Link href='/services#mineral-resource-assessment'>Mineral Resource Assessment</Link>
               </li>
               <li>
-                <Link href='/'>Digital Marketing</Link>
+                <Link href='/services#mine-safety-and-ventilation'>Mine Safety & Ventilation</Link>
               </li>
               <li>
-                <Link href='/'>E-Commerce</Link>
+                <Link href='/services#mining-education-and-training'>Mining Education & Training</Link>
+              </li>
+              <li>
+                <Link href='/services#automation-solutions'>Automation Solutions</Link>
+              </li>
+              <li>
+                <Link href='/services#geotechnical-expertise'>Geotechnical Expertise</Link>
               </li>
             </ul>
             <ul>

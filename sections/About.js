@@ -20,27 +20,13 @@ const About = () => {
           </div>
 
           <div className="content flex1">
-            <div className="left w-50 py">
+            <div className="left w-60 py">
               <TitleSa title=" Dr
                 Srikant Annavarapu is an SME Registered Member and is recognised
                 as a Qualified Person (NI 43-101), Competent Person (JORC) and
                 Registered Competent Person (NACRI)." />
               <p className="desc-p">
-                Dr Srikant Annavarapu has an extensive background in and
-                in-depth understanding of mining and geotechnical engineering,
-                underground and surface mining methods and operations, including
-                ground stabilization instrumentation, monitoring and analysis.
-                His 40 years of experience in India, USA and Indonesia includes
-                geotechnical engineering, mine design, and mine planning. He
-                prioritizes safety for all projects, remains current with
-                technological change and provides cost-effective geotechnical
-                and mining engineering services for exploration, mine
-                development and expansion projects in the prefeasibility stage
-                through to operations phases.</p> < p className="desc-p"> His areas of specialty include
-                project-specific mine design and evaluation, assessment of
-                appropriate mining technologies and methods, assessment of
-                appropriate ground support and control systems and the
-                preparation of technical reports under CRIRSCO guidelines.
+              Dr. Srikant Annavarapu has 40 years of experience in mining and geotechnical engineering, working in India, USA, and Indonesia. Specialist in underground and surface mining methods, ground stabilization, instrumentation, monitoring, and analysis. His expertise spans geotechnical engineering, mine design, and planning, emphasizing on safety and cost-effectiveness. Providing geotechnical and mining engineering services from prefeasibility to operations phases, including project-specific mine design, and technical report preparation under CRIRSCO guidelines. 
               </p>
               <div className="grid-3">
                 <div className="box">
@@ -57,7 +43,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="right w-50 ml">
+            <div className="right w-40 ml">
               <img
                 src="https://res.cloudinary.com/dh4qhdszo/image/upload/v1716551288/mgstucson/ooxt7kbt6erbzri5qidt.jpg"
                 alt="Img"

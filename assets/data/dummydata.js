@@ -23,7 +23,7 @@ export const home = [
 ]
 export const expertise = [
   {
-    id: 1,
+    id: `#mining-and-civil-engg`,
     title: "Mining & Civil Engineering Design",
     cover: "../images/e1.jpg",
     desc: [
@@ -34,7 +34,7 @@ export const expertise = [
     ],
   },
   {
-    id: 2,
+    id: `#mineral-resource-assessment`,
     title: "Mineral Resource Assessment",
     cover: "../images/e2.jpg",
     desc: [
@@ -45,7 +45,7 @@ export const expertise = [
     ],
   },
   {
-    id: 3,
+    id: `#mine-safety-and-ventilation`,
     title: "Mine Safety & Ventilation",
     cover: "../images/e3.jpg",
     desc: [
@@ -56,7 +56,7 @@ export const expertise = [
     ],
   },
   {
-    id: 4,
+    id: `#mining-education-and-training`,
     title: "Mining Education & Training",
     cover: "../images/e4.jpg",
     desc: [
@@ -67,7 +67,7 @@ export const expertise = [
     ],
   },
   {
-    id: 5,
+    id: `#automation-solutions`,
     title: "Automation Solutions",
     cover: "../images/e1.jpg",
     desc: [
@@ -78,7 +78,7 @@ export const expertise = [
     ],
   },
   {
-    id: 6,
+    id: `#geotechnical-expertise`,
     title: "Geotechnical Expertise",
     cover: "../images/e2.jpg",
     desc: [
