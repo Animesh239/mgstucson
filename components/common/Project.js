@@ -12,8 +12,8 @@ export const Project = ({ data, caption, show, path }) => {
         <div className="">
           <Title title={data.title} className={"title-bg"} />
           <div className="flex">
-            <span> {data.mine} </span> 
-            {data.date && <span> &nbsp; | &nbsp;  {data.date}</span>}
+            <span> {data.mine} </span>
+            {data.date && <span> &nbsp; | &nbsp; {data.date}</span>}
           </div>
           {shortDesc && <p className="short-desc">{shortDesc}</p>}
         </div>
@@ -34,10 +34,27 @@ export const Project = ({ data, caption, show, path }) => {
         )}
 
         {show && (
-          <div className="testimonial">
-            <TitleSm title="Testimonial" />
-            {/* <p>{data.testimonial}</p> */}
-          </div>
+          <section className="ptestimonial">
+            <div className="container">
+              <div className="heading-title">
+                <TitleSm title="Testimonial" />
+              </div>
+              <div className="pcards">
+                <div className="pimage">
+                  <div className="pimg">
+                    <img src={data.testimonial.cover} alt="" />
+                  </div>
+                  <div className="pimg-text">
+                    <h3>{data.testimonial.name}</h3>
+                    <span>{data.testimonial.post}</span>
+                  </div>
+                </div>
+                <div className="pdetails">
+                  <p>{data.testimonial.desc}</p>
+                </div>
+              </div>
+            </div>
+          </section>
         )}
       </div>
     </>

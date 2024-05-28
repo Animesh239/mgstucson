@@ -144,7 +144,7 @@ export const projects = [
       name: "Diana Green",
       cover: "../images/e4.jpg",
       post: "Seven Arts - marketing manager",
-      desc: "Cras at ornare fermentum quam et tortor euismod, vel maximus metus tristique at ornare ex, quis fringilla tortor. Aenean semper neque quis consectetur lobortis. Quisque nec convallis ex. Aenean ut metus et nunc cursus aliquet.",
+      desc: "Cras at ornare fermentum quam et tortor euismod, vel maximus metus tristique at ornare ex, quis fringilla tortor. Aenean semper neque quis consectetur lobortis. Quisque nec convallis ex. Aenean ut metus et nunc cursus aliquet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nisi, officia tempore sunt necessitatibus minus eos provident odit cupiditate minima sequi blanditiis. Molestias. ",
     },
   },
   {
@@ -167,7 +167,7 @@ export const projects = [
     ],
     testimonial: {
       name: "John Doe",
-      cover: "../images/e5.jpg",
+      cover: "../images/e1.jpg",
       post: "XYZ Corp - project manager",
       desc: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.",
     },
@@ -192,7 +192,7 @@ export const projects = [
     ],
     testimonial: {
       name: "Jane Smith",
-      cover: "../images/e6.jpg",
+      cover: "../images/e2.jpg",
       post: "UVW Corp - design lead",
       desc: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
     },
@@ -217,7 +217,7 @@ export const projects = [
     ],
     testimonial: {
       name: "Robert Brown",
-      cover: "../images/e7.jpg",
+      cover: "../images/e2.jpg",
       post: "RST Ltd - ventilation engineer",
       desc: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
     },
@@ -242,7 +242,7 @@ export const projects = [
     ],
     testimonial: {
       name: "Emily White",
-      cover: "../images/e8.jpg",
+      cover: "../images/e4.jpg",
       post: "MNO Corp - operations manager",
       desc: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.",
     },
@@ -267,7 +267,7 @@ export const projects = [
     ],
     testimonial: {
       name: "Michael Black",
-      cover: "../images/e9.jpg",
+      cover: "../images/e1.jpg",
       post: "PQR Ltd - geotechnical engineer",
       desc: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
     },
