@@ -13,13 +13,13 @@ const Projects = () => {
           <div className='heading-title'>
             <Title title='Selected Projects' />
           </div>
-          <div className='hero-content grid-3 py'>
-            {projects.map((item) => (
-              <Card data={item} key={item.id} />
+          <div className='hero-content grid-2 py'>
+            {projects.slice(0, 4).map((item) => (
+              <Card data={item} path={"projects"} key={item.id} />
             ))}
           </div>
           <div className='card links'>
-            <Link href='/'>
+            <Link href='/projects'>
               VIEW ALL PROJECTS <HiOutlineArrowRight className='link-icon' />
             </Link>
           </div>

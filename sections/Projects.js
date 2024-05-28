@@ -17,11 +17,11 @@ const Projects = () => {
           <br />
           <div className='grid-3'>
             {projects.map((item) => (
-              <Card data={item} key={item.id} caption={item.post} />
+              <Card data={item} path={"projects"} key={item.id} caption={item.post} />
             ))}
           </div>
           <div className='py btn'>
-            <button className='secondary-button'>View More</button>
+            {/* <button className='secondary-button'>View More</button> */}
           </div>
         </div>
       </section>
