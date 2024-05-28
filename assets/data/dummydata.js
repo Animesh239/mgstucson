@@ -1,7 +1,7 @@
-import { AiOutlineCalendar } from "react-icons/ai"
-import { TfiRulerPencil } from "react-icons/tfi"
-import { VscFileSubmodule } from "react-icons/vsc"
-import { BiUser } from "react-icons/bi"
+import { AiOutlineCalendar } from "react-icons/ai";
+import { TfiRulerPencil } from "react-icons/tfi";
+import { VscFileSubmodule } from "react-icons/vsc";
+import { BiUser } from "react-icons/bi";
 
 export const home = [
   {
@@ -20,7 +20,7 @@ export const home = [
     icon: <BiUser size={25} />,
     title: "Customer satisfaction is our top priority",
   },
-]
+];
 export const expertise = [
   {
     id: `#mining-and-civil-engg`,
@@ -119,57 +119,161 @@ export const testimonial = [
     post: "Seven Arts - marketing manager",
     desc: "Cras at ornare fermentum quam et tortor euismod, vel maximus metus tristique at ornare ex, quis fringilla tortor. Aenean semper neque quis consectetur lobortis. Quisque nec convallis ex. Aenean ut metus et nunc cursus aliquet.",
   },
-]
+];
 export const projects = [
   {
     id: 1,
-    title: "Open-Pit Mine Design",
-    cover: "../images/s1.jpg",
-    catgeory: "MINING ENGINEERING",
-    date: "2023-01-01",
-    desc: [{ text: "Project detail 1" }, { text: "Project detail 2" }],
+    title: "Open-Cast Mine Design",
+    date: "1st June 2022",
+    cover:
+      "https://res.cloudinary.com/dh4qhdszo/image/upload/v1716559373/mgstucson/bvd5dvrzeh9lc1mglhlm.jpg",
+    imgsrc: "Image source: abcdef company",
+    mine: "Chikla Mines, Maharashtra",
+    desc: [
+      {
+        text: "This is a project based on the effective mining in highly steeping ground",
+      },
+      {
+        text: "Lorem ipsum dolor imet  et a ssgw4 tgss ewra sds ss c x drhe Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum illum aperiam iste aspernatur nihil amet consectetur perferendis, ipsum officia excepturi incidunt cumque.",
+      },
+      {
+        text: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum illum aperiam iste aspernatur nihil amet consectetur perferendis, ipsum officia excepturi incidunt cumque.",
+      },
+    ],
+    testimonial: {
+      name: "Diana Green",
+      cover: "../images/e4.jpg",
+      post: "Seven Arts - marketing manager",
+      desc: "Cras at ornare fermentum quam et tortor euismod, vel maximus metus tristique at ornare ex, quis fringilla tortor. Aenean semper neque quis consectetur lobortis. Quisque nec convallis ex. Aenean ut metus et nunc cursus aliquet.",
+    },
   },
   {
     id: 2,
     title: "Underground Mine Development",
-    catgeory: "MINING ENGINEERING",
-    cover: "../images/s2.jpg",
-    date: "2023-02-01",
-    desc: [{ text: "Project detail 1" }, { text: "Project detail 2" }],
+    date: "1st February 2023",
+    cover: "https://res.cloudinary.com/dh4qhdszo/image/upload/v1716559373/mgstucson/bvd5dvrzeh9lc1mglhlm.jpg",
+    imgsrc: "Image source: xyz company",
+    mine: "Dharwar Mines, Karnataka",
+    desc: [
+      {
+        text: "This project focuses on underground mine development and its challenges",
+      },
+      {
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      },
+      {
+        text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      },
+    ],
+    testimonial: {
+      name: "John Doe",
+      cover: "../images/e5.jpg",
+      post: "XYZ Corp - project manager",
+      desc: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.",
+    },
   },
   {
     id: 3,
     title: "3D Mine Modeling",
-    cover: "../images/s3.jpg",
-    catgeory: "GEOTECHNICAL SERVICES",
-    date: "2023-03-01",
-    desc: [{ text: "Project detail 1" }, { text: "Project detail 2" }],
+    date: "1st March 2023",
+    cover: "https://res.cloudinary.com/dh4qhdszo/image/upload/v1716559373/mgstucson/bvd5dvrzeh9lc1mglhlm.jpg",
+    imgsrc: "Image source: uvw company",
+    mine: "Hatti Gold Mines, Karnataka",
+    desc: [
+      {
+        text: "Creating a 3D model for better mine planning and safety measures",
+      },
+      {
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      },
+      {
+        text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      },
+    ],
+    testimonial: {
+      name: "Jane Smith",
+      cover: "../images/e6.jpg",
+      post: "UVW Corp - design lead",
+      desc: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+    },
   },
   {
     id: 4,
     title: "Ventilation System Design",
-    cover: "../images/s4.jpg",
-    catgeory: "MINE SAFETY & HEALTH",
-    date: "2023-04-01",
-    desc: [{ text: "Project detail 1" }, { text: "Project detail 2" }],
+    date: "1st April 2023",
+    cover: "https://res.cloudinary.com/dh4qhdszo/image/upload/v1716559373/mgstucson/bvd5dvrzeh9lc1mglhlm.jpg",
+    imgsrc: "Image source: rst company",
+    mine: "Singrauli Coal Mines, Madhya Pradesh",
+    desc: [
+      {
+        text: "Designing an effective ventilation system for underground mines",
+      },
+      {
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      },
+      {
+        text: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
+    ],
+    testimonial: {
+      name: "Robert Brown",
+      cover: "../images/e7.jpg",
+      post: "RST Ltd - ventilation engineer",
+      desc: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+    },
   },
   {
     id: 5,
     title: "Automated Drilling Equipment",
-    cover: "../images/s5.jpg",
-    catgeory: "AUTOMATION SOLUTIONS",
-    date: "2023-05-01",
-    desc: [{ text: "Project detail 1" }, { text: "Project detail 2" }],
+    date: "1st May 2023",
+    cover: "https://res.cloudinary.com/dh4qhdszo/image/upload/v1716559373/mgstucson/bvd5dvrzeh9lc1mglhlm.jpg",
+    imgsrc: "Image source: mno company",
+    mine: "Korba Mines, Chhattisgarh",
+    desc: [
+      {
+        text: "Implementing automated drilling equipment to improve efficiency",
+      },
+      {
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      },
+      {
+        text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+      },
+    ],
+    testimonial: {
+      name: "Emily White",
+      cover: "../images/e8.jpg",
+      post: "MNO Corp - operations manager",
+      desc: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.",
+    },
   },
   {
     id: 6,
     title: "Geotechnical Site Investigation",
-    cover: "../images/s6.jpg",
-    catgeory: "GEOTECHNICAL SERVICES",
-    date: "2023-06-01",
-    desc: [{ text: "Project detail 1" }, { text: "Project detail 2" }],
+    date: "1st June 2023",
+    cover: "https://res.cloudinary.com/dh4qhdszo/image/upload/v1716559373/mgstucson/bvd5dvrzeh9lc1mglhlm.jpg",
+    imgsrc: "Image source: pqr company",
+    mine: "Joda Mines, Odisha",
+    desc: [
+      {
+        text: "Conducting geotechnical investigations for safe mine construction",
+      },
+      {
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      },
+      {
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+      },
+    ],
+    testimonial: {
+      name: "Michael Black",
+      cover: "../images/e9.jpg",
+      post: "PQR Ltd - geotechnical engineer",
+      desc: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+    },
   },
-]
+];
+
 export const brand = [
   {
     id: 1,
@@ -195,7 +299,7 @@ export const brand = [
   //   id: 6,
   //   cover: "../images/l6.svg",
   // },
-]
+];
 export const blogdata = [
   {
     id: 1,
@@ -213,7 +317,8 @@ export const blogdata = [
   },
   {
     id: 3,
-    title: "Building the real VR lorem ipsum dolor amet glavrida from a scratch",
+    title:
+      "Building the real VR lorem ipsum dolor amet glavrida from a scratch",
     cover: "../images/b3.jpg",
     catgeory: "TIPS & TRICKS",
     date: "OCTOBER 9, 2023",
@@ -225,7 +330,7 @@ export const blogdata = [
     catgeory: "EVENTS",
     date: "OCTOBER 8, 2023",
   },
-]
+];
 export const teamdata = [
   {
     id: 1,
@@ -275,4 +380,4 @@ export const teamdata = [
     cover: "../images/t8.jpg",
     post: "",
   },
-]
+];

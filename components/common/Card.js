@@ -19,7 +19,7 @@ export const Card = ({ data, caption, show, path }) => {
             </Link>
           )}
           <div className='flex'>
-            <span> {data.catgeory} </span> {data.date && <span> / {data.date}</span>}
+            <span> {data.mine} </span>  {data.date && <span>  &nbsp; | &nbsp;  {data.date}</span>}
           </div>
 
           {show && (
