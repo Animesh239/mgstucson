@@ -46,7 +46,8 @@ export const Project = ({ data, caption, show, path }) => {
                   </div>
                   <div className="pimg-text">
                     <h3>{data.testimonial.name}</h3>
-                    <span>{data.testimonial.post}</span>
+                    <span>{data.testimonial.post.split("-")[0]}</span><br/>
+                    <span><i>{data.testimonial.post.split("-")[1]}</i></span>
                   </div>
                 </div>
                 <div className="pdetails">

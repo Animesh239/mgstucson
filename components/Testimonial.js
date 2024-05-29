@@ -1,7 +1,7 @@
 import React from "react"
 import { TitleSm } from "./common/Title"
 import Link from "next/link"
-import { testimonial } from "@/assets/data/dummydata"
+import { projects } from "@/assets/data/dummydata"
 import { HiOutlineArrowRight } from "react-icons/hi"
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri"
 import "slick-carousel/slick/slick.css"
@@ -51,6 +51,14 @@ const Testimonial = () => {
       },
     ],
   }
+
+  const testimonial = projects.map((project) => {
+    return {
+      ...project.testimonial,
+      projectId: project.id,
+    }
+  })
+
   return (
     <>
       <section className='testimonial'>
@@ -61,20 +69,24 @@ const Testimonial = () => {
           <div className='cards'>
             <Slider {...settings}>
               {testimonial.map((user) => (
-                <div>
+                <div key={user.projectId}>
                   <div className='card'>
                     <div className='image'>
                       <div className='img'>
-                        <img src={user.cover} alt='' />
+                        <img src={user.cover} alt={user.name} />
                       </div>
                       <div className='img-text'>
                         <h3>{user.name}</h3>
-                        <span>{user.post}</span>
+                        <span>
+                          {user.post.split(" - ")[0]}
+                          <br />
+                          {user.post.split(" - ")[1]}
+                        </span>
                       </div>
                     </div>
                     <div className='details'>
                       <p>{user.desc}</p>
-                      <Link href='/#'>
+                      <Link href={`/projects/${user.projectId}`}>
                         VIEW CASE <HiOutlineArrowRight className='link-icon' />
                       </Link>
                     </div>
