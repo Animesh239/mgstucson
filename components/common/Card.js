@@ -25,9 +25,9 @@ export const Card = ({ data, caption, show, path, social }) => {
             </Link>
           )}
 
-         { data.date && (
+         { data.date &&  (
           <div className='flex'>
-            <span> {data.mine} </span>  {data.date && <span>  &nbsp; | &nbsp;  {data.date}</span>}
+            <span> {data.mine} </span>  {data.date && <span>{data.category}  &nbsp; | &nbsp;  {data.date}</span>}
           </div>
           )}
 

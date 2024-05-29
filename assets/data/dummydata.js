@@ -311,30 +311,74 @@ export const blogdata = [
     id: 1,
     title: "Ligula vel urna accumsan placerat",
     cover: "../images/b1.webp",
-    catgeory: "INDUSTRY",
+    category: "INDUSTRY",
     date: "JANUARY 12, 2023",
+    desc: [
+      {
+        text: "This is a project based on the effective mining in highly steeping ground",
+      },
+      {
+        text: "Lorem ipsum dolor imet  et a ssgw4 tgss ewra sds ss c x drhe Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum illum aperiam iste aspernatur nihil amet consectetur perferendis, ipsum officia excepturi incidunt cumque.",
+      },
+      {
+        text: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum illum aperiam iste aspernatur nihil amet consectetur perferendis, ipsum officia excepturi incidunt cumque.",
+      },
+    ]
   },
   {
     id: 2,
     title: "Don’t underestimate the lorem ipsum dolor amet",
     cover: "../images/b2.jpg",
-    catgeory: "TIPS & TRICKS",
+    category: "TIPS & TRICKS",
     date: "OCTOBER 20, 2023",
+    desc: [
+      {
+        text: "This is a project based on the effective mining in highly steeping ground",
+      },
+      {
+        text: "Lorem ipsum dolor imet  et a ssgw4 tgss ewra sds ss c x drhe Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum illum aperiam iste aspernatur nihil amet consectetur perferendis, ipsum officia excepturi incidunt cumque.",
+      },
+      {
+        text: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum illum aperiam iste aspernatur nihil amet consectetur perferendis, ipsum officia excepturi incidunt cumque.",
+      },
+    ],
   },
   {
     id: 3,
     title:
       "Building the real VR lorem ipsum dolor amet glavrida from a scratch",
     cover: "../images/b3.jpg",
-    catgeory: "TIPS & TRICKS",
+    category: "TIPS & TRICKS",
     date: "OCTOBER 9, 2023",
+    desc: [
+      {
+        text: "This is a project based on the effective mining in highly steeping ground",
+      },
+      {
+        text: "Lorem ipsum dolor imet  et a ssgw4 tgss ewra sds ss c x drhe Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum illum aperiam iste aspernatur nihil amet consectetur perferendis, ipsum officia excepturi incidunt cumque.",
+      },
+      {
+        text: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum illum aperiam iste aspernatur nihil amet consectetur perferendis, ipsum officia excepturi incidunt cumque.",
+      },
+    ],
   },
   {
     id: 4,
     title: "What eleifend posuere tincidunt",
     cover: "../images/b4.jpg",
-    catgeory: "EVENTS",
+    category: "EVENTS",
     date: "OCTOBER 8, 2023",
+    desc: [
+      {
+        text: "This is a project based on the effective mining in highly steeping ground",
+      },
+      {
+        text: "Lorem ipsum dolor imet  et a ssgw4 tgss ewra sds ss c x drhe Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum illum aperiam iste aspernatur nihil amet consectetur perferendis, ipsum officia excepturi incidunt cumque.",
+      },
+      {
+        text: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum illum aperiam iste aspernatur nihil amet consectetur perferendis, ipsum officia excepturi incidunt cumque.",
+      },
+    ],
   },
 ];
 export const teamdata = [
