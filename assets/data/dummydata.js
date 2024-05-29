@@ -343,47 +343,55 @@ export const teamdata = [
     title: "Alexander Black",
     cover: "../images/t1.jpg",
     post: "FOUNDER, CEO",
+    social: 'https://www.linkedin.com/in/animesh239/'
   },
   {
     id: 2,
     title: "Anna Kovalenko",
     cover: "../images/t2.jpg",
     post: "FINANCE DIRECTOR",
+    social: 'https://www.linkedin.com/in/animesh239/'
   },
   {
     id: 3,
     title: "Tiffany White",
     cover: "../images/t3.jpg",
     post: "CREATIVE DIRECTOR",
+    social: 'https://www.linkedin.com/in/animesh239/'
   },
   {
     id: 4,
     title: "Richard Greenwood",
     cover: "../images/t4.jpg",
     post: "PROGRAMMER",
+    social: 'https://www.linkedin.com/in/animesh239/'
   },
   {
     id: 5,
     title: "Jessica Brown",
     cover: "../images/t5.jpg",
     post: "MARKETING DIRECTOR",
+    social: 'https://www.linkedin.com/in/animesh239/'
   },
   {
     id: 6,
     title: "Gregory Windstorm",
     cover: "../images/t6.jpg",
     post: "ACCOUNTING MANAGER",
+    social: 'https://www.linkedin.com/in/animesh239/'
   },
   {
     id: 7,
     title: "Anna Red",
     cover: "../images/t7.jpg",
     post: "PROJECT MANAGER",
+    social: 'https://www.linkedin.com/in/animesh239/'
   },
   {
     id: 8,
     title: "Join our team!",
     cover: "../images/t8.jpg",
-    post: "",
+    post: "Director of HR",
+    social: 'https://www.linkedin.com/in/animesh239/'
   },
 ];

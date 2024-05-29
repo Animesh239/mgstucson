@@ -1,8 +1,9 @@
 import Link from "next/link"
 import { TitleSm } from "./Title"
 import { HiOutlineArrowRight } from "react-icons/hi"
+import { BsLinkedin } from "react-icons/bs"
 
-export const Card = ({ data, caption, show, path }) => {
+export const Card = ({ data, caption, show, path, social }) => {
   return (
     <>
       <div className='card'>
@@ -13,14 +14,22 @@ export const Card = ({ data, caption, show, path }) => {
           <Link href={`${path}/${data.id}`} className='title-link'>
             <TitleSm title={data.title} />
           </Link>
-          {caption && (
+          {(caption && !social)  && (
             <Link href={`${path}/${data.id}`}>
               {caption} <HiOutlineArrowRight className='link-icon' />
             </Link>
           )}
+          {(caption && social) &&  (
+            <Link href={`${path}/${data.id}`}>
+              {caption} <BsLinkedin className='link-icon' />
+            </Link>
+          )}
+
+         { data.date && (
           <div className='flex'>
             <span> {data.mine} </span>  {data.date && <span>  &nbsp; | &nbsp;  {data.date}</span>}
           </div>
+          )}
 
           {show && (
             <ul>

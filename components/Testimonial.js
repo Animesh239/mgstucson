@@ -79,7 +79,7 @@ const Testimonial = () => {
                         <h3>{user.name}</h3>
                         <span>
                           {user.post.split(" - ")[0]}
-                          <br />
+                          <br /> 
                           {user.post.split(" - ")[1]}
                         </span>
                       </div>
