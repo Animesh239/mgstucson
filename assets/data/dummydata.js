@@ -152,7 +152,8 @@ export const projects = [
     id: 2,
     title: "Underground Mine Development",
     date: "1st February 2023",
-    cover: "https://res.cloudinary.com/dh4qhdszo/image/upload/v1716559373/mgstucson/bvd5dvrzeh9lc1mglhlm.jpg",
+    cover:
+      "https://res.cloudinary.com/dh4qhdszo/image/upload/v1716559373/mgstucson/bvd5dvrzeh9lc1mglhlm.jpg",
     imgsrc: "Image source: xyz company",
     mine: "Dharwar Mines, Karnataka",
     desc: [
@@ -178,7 +179,8 @@ export const projects = [
     id: 3,
     title: "3D Mine Modeling",
     date: "1st March 2023",
-    cover: "https://res.cloudinary.com/dh4qhdszo/image/upload/v1716559373/mgstucson/bvd5dvrzeh9lc1mglhlm.jpg",
+    cover:
+      "https://res.cloudinary.com/dh4qhdszo/image/upload/v1716559373/mgstucson/bvd5dvrzeh9lc1mglhlm.jpg",
     imgsrc: "Image source: uvw company",
     mine: "Hatti Gold Mines, Karnataka",
     desc: [
@@ -204,7 +206,8 @@ export const projects = [
     id: 4,
     title: "Ventilation System Design",
     date: "1st April 2023",
-    cover: "https://res.cloudinary.com/dh4qhdszo/image/upload/v1716559373/mgstucson/bvd5dvrzeh9lc1mglhlm.jpg",
+    cover:
+      "https://res.cloudinary.com/dh4qhdszo/image/upload/v1716559373/mgstucson/bvd5dvrzeh9lc1mglhlm.jpg",
     imgsrc: "Image source: rst company",
     mine: "Singrauli Coal Mines, Madhya Pradesh",
     desc: [
@@ -230,7 +233,8 @@ export const projects = [
     id: 5,
     title: "Automated Drilling Equipment",
     date: "1st May 2023",
-    cover: "https://res.cloudinary.com/dh4qhdszo/image/upload/v1716559373/mgstucson/bvd5dvrzeh9lc1mglhlm.jpg",
+    cover:
+      "https://res.cloudinary.com/dh4qhdszo/image/upload/v1716559373/mgstucson/bvd5dvrzeh9lc1mglhlm.jpg",
     imgsrc: "Image source: mno company",
     mine: "Korba Mines, Chhattisgarh",
     desc: [
@@ -256,7 +260,8 @@ export const projects = [
     id: 6,
     title: "Geotechnical Site Investigation",
     date: "1st June 2023",
-    cover: "https://res.cloudinary.com/dh4qhdszo/image/upload/v1716559373/mgstucson/bvd5dvrzeh9lc1mglhlm.jpg",
+    cover:
+      "https://res.cloudinary.com/dh4qhdszo/image/upload/v1716559373/mgstucson/bvd5dvrzeh9lc1mglhlm.jpg",
     imgsrc: "Image source: pqr company",
     mine: "Joda Mines, Odisha",
     desc: [
@@ -323,7 +328,18 @@ export const blogdata = [
       {
         text: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum illum aperiam iste aspernatur nihil amet consectetur perferendis, ipsum officia excepturi incidunt cumque.",
       },
-    ]
+    ],
+    attachments: [
+      {
+        type: "youtube",
+        url: 'https://www.youtube.com/watch?v=fnYfSueNIoQ',
+        desc: "Watch the video her to know more about the project Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, labore!",
+      },
+      // {
+      //   type: "drive",
+      //   url: "https://drive.google.com/file/d/1O2w4l5J8f2NfU4P/view?usp=sharing",
+      // },
+    ],
   },
   {
     id: 2,
@@ -387,55 +403,55 @@ export const teamdata = [
     title: "Alexander Black",
     cover: "../images/t1.jpg",
     post: "FOUNDER, CEO",
-    social: 'https://www.linkedin.com/in/animesh239/'
+    social: "https://www.linkedin.com/in/animesh239/",
   },
   {
     id: 2,
     title: "Anna Kovalenko",
     cover: "../images/t2.jpg",
     post: "FINANCE DIRECTOR",
-    social: 'https://www.linkedin.com/in/animesh239/'
+    social: "https://www.linkedin.com/in/animesh239/",
   },
   {
     id: 3,
     title: "Tiffany White",
     cover: "../images/t3.jpg",
     post: "CREATIVE DIRECTOR",
-    social: 'https://www.linkedin.com/in/animesh239/'
+    social: "https://www.linkedin.com/in/animesh239/",
   },
   {
     id: 4,
     title: "Richard Greenwood",
     cover: "../images/t4.jpg",
     post: "PROGRAMMER",
-    social: 'https://www.linkedin.com/in/animesh239/'
+    social: "https://www.linkedin.com/in/animesh239/",
   },
   {
     id: 5,
     title: "Jessica Brown",
     cover: "../images/t5.jpg",
     post: "MARKETING DIRECTOR",
-    social: 'https://www.linkedin.com/in/animesh239/'
+    social: "https://www.linkedin.com/in/animesh239/",
   },
   {
     id: 6,
     title: "Gregory Windstorm",
     cover: "../images/t6.jpg",
     post: "ACCOUNTING MANAGER",
-    social: 'https://www.linkedin.com/in/animesh239/'
+    social: "https://www.linkedin.com/in/animesh239/",
   },
   {
     id: 7,
     title: "Anna Red",
     cover: "../images/t7.jpg",
     post: "PROJECT MANAGER",
-    social: 'https://www.linkedin.com/in/animesh239/'
+    social: "https://www.linkedin.com/in/animesh239/",
   },
   {
     id: 8,
     title: "Join our team!",
     cover: "../images/t8.jpg",
     post: "Director of HR",
-    social: 'https://www.linkedin.com/in/animesh239/'
+    social: "https://www.linkedin.com/in/animesh239/",
   },
 ];

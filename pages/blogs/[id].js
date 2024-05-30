@@ -1,9 +1,11 @@
+// pages/blog/[id].js
 import { blogdata } from "@/assets/data/dummydata";
 import Banner from "@/components/Banner";
 import { Title, TitleSm } from "@/components/common/Title";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
+import AttachmentPreview from "@/components/AttachmentPreview";
 
 const SinglePost = () => {
   const router = useRouter();
@@ -50,6 +52,13 @@ const SinglePost = () => {
                     <p className="desc-p" key={i}>
                       {text.text}
                     </p>
+                  ))}
+                </div>
+              )}
+              {post.attachments && post.attachments.length > 0 && (
+                <div className="attachments">
+                  {post.attachments.map((attachment, index) => (
+                    <AttachmentPreview key={index} attachment={attachment} />
                   ))}
                 </div>
               )}
