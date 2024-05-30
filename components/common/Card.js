@@ -11,7 +11,7 @@ export const Card = ({ data, caption, show, path, social }) => {
           <img src={data.cover} alt={data.title} />
         </div>
         <div className='card-details'>
-          <Link href={`${path}/${data.id}`} className='title-link'>
+          <Link href={social ? `${data.social}` : `${path}/${data.id}`} className='title-link'>
             <TitleSm title={data.title} />
           </Link>
           {(caption && !social)  && (
@@ -20,7 +20,7 @@ export const Card = ({ data, caption, show, path, social }) => {
             </Link>
           )}
           {(caption && social) &&  (
-            <Link href={`${path}/${data.id}`}>
+            <Link href={`${data.social}`}>
               {caption} <BsLinkedin className='link-icon' />
             </Link>
           )}
