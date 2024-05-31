@@ -473,6 +473,51 @@ footer {
   }
 }
 
+@media  screen and (max-width: 800px){
+  .contact {
+    .left {
+      padding-right: 0;
+      ul {
+        // flex-direction: column;
+        align-items: center;
+        margin-top: $xl;
+      }
+      .box {
+        margin-bottom: $xl;
+        // align-items: center;
+        // flex-direction: row;
+        h3 {
+          padding: $xl-2 0;
+        }
+      }
+    }
+    .right {
+      padding: $xl;
+      form {
+        margin-top: $xl;
+      }
+      .inputs {
+        margin-bottom: $xl-6;
+        span {
+          text-transform: uppercase;
+        }
+        textarea,
+        input {
+          width: 100%;
+          background-color: $white;
+          padding: 15px;
+          margin-top: $sm;
+          color: $dark;
+        }
+      }
+      button {
+        width: 100%;
+        padding: 18px;
+      }
+    }
+  }
+}
+
 //single page
 .post-details {
   .heading-title {

@@ -107,7 +107,7 @@ const Contact = () => {
             <br />
             <Title title="Let's start right now!" className='title-bg' />
           </div>
-          <div className='content py flex1'>
+          <div className='content py-1 flex1'>
             <div className='left w-30'>
               <div className='contact-details'>
                 <div className='box'>
