@@ -216,6 +216,37 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  .ptestimonial {
+    .pcards {
+      flex-direction: column;
+      .pimage {
+        flex-direction: column;
+        width: 100%;
+        .pimg {
+          width: 100px;
+          height: 100px;
+        }
+        .pimg-text {
+          flex-direction: column;
+          text-align: center;
+          margin-left: 0;
+          h3 {
+            margin-bottom: 0;
+            font-size: 20px;
+          }
+        }
+      }
+      .pdetails {
+        margin-top: 0.5rem;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  
+}
+
 //showcase
 .showcase {
   .card-img {
@@ -458,6 +489,10 @@ footer {
 // project-detail
 .project {
   margin-bottom: 2rem;
+  span{
+    color: #888;
+  
+  }
 }
 
 .card-details {
