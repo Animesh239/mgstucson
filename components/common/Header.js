@@ -14,8 +14,12 @@ const Header = () => {
     setActiveLink(router.pathname);
   }, [router.pathname]);
 
-  const handleMenuToggle = () => {
-    setOpen((prevState) => !prevState);
+  const handleMenuToggle = (toggled) => {
+    setOpen(toggled);
+  };
+
+  const handleLinkClick = () => {
+    setOpen(false);
   };
 
   return (
@@ -78,9 +82,10 @@ const Header = () => {
           </nav>
           <button className="menu-toggle">
             <Hamburger
+              toggled={open}
+              toggle={handleMenuToggle}
               duration={0.8}
               color="#ffe"
-              onToggle={handleMenuToggle}
             />
           </button>
         </div>
@@ -89,35 +94,35 @@ const Header = () => {
             <motion.div
               className="blur-background active"
               initial={{ opacity: 0, y: "-100%" }}
-              animate={{ opacity: 1,y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: "-100%" }}
               transition={{ duration: 0.5 }}
             >
               <div>
                 <Link
                   href="/"
-                  onClick={handleMenuToggle}
+                  onClick={handleLinkClick}
                   className={activeLink == "/" ? "activeLink item" : "item"}
                 >
                   Home
                 </Link>
                 <Link
                   href="/about"
-                  onClick={handleMenuToggle}
+                  onClick={handleLinkClick}
                   className={activeLink == "/about" ? "activeLink item" : "item"}
                 >
                   About Us
                 </Link>
                 <Link
                   href="/team"
-                  onClick={handleMenuToggle}
+                  onClick={handleLinkClick}
                   className={activeLink == "/team" ? "activeLink item" : "item"}
                 >
                   Team
                 </Link>
                 <Link
                   href="/services"
-                  onClick={handleMenuToggle}
+                  onClick={handleLinkClick}
                   className={
                     activeLink == "/services" ? "activeLink item" : "item"
                   }
@@ -126,7 +131,7 @@ const Header = () => {
                 </Link>
                 <Link
                   href="/projects"
-                  onClick={handleMenuToggle}
+                  onClick={handleLinkClick}
                   className={
                     activeLink == "/projects" ? "activeLink item" : "item"
                   }
@@ -135,14 +140,14 @@ const Header = () => {
                 </Link>
                 <Link
                   href="/blogs"
-                  onClick={handleMenuToggle}
+                  onClick={handleLinkClick}
                   className={activeLink == "/blogs" ? "activeLink item" : "item"}
                 >
                   Blog
                 </Link>
                 <Link
                   href="/contact"
-                  onClick={handleMenuToggle}
+                  onClick={handleLinkClick}
                   className={
                     activeLink == "/contact" ? "activeLink item" : "item"
                   }
