@@ -278,6 +278,18 @@ footer {
   }
 }
 
+.error {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.notification {
+  color: green;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
 //Agency Page
 .bg-top {
   &::after {
