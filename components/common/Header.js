@@ -1,57 +1,162 @@
-import Link from "next/link"
-import { TitleLogo } from "./Title"
-import { useRouter } from "next/router"
-import { useEffect, useState } from "react"
-import { RiMenu4Line } from "react-icons/ri"
-import { AiOutlineClose } from "react-icons/ai"
+import Link from "next/link";
+import { TitleLogo } from "./Title";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { Sling as Hamburger } from "hamburger-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
-  const [activeLink, setActiveLink] = useState("")
-  const [open, setOpen] = useState(false)
+  const [activeLink, setActiveLink] = useState("");
+  const [open, setOpen] = useState(false);
 
-  const router = useRouter()
+  const router = useRouter();
   useEffect(() => {
-    setActiveLink(router.pathname)
-  }, [router.pathname])
+    setActiveLink(router.pathname);
+  }, [router.pathname]);
+
+  const handleMenuToggle = () => {
+    setOpen((prevState) => !prevState);
+  };
+
   return (
     <>
       <header>
-        <div className='container'>
-          <div className='logo'>
-            <Link href='/' className="flex">
-              <img src="https://res.cloudinary.com/dh4qhdszo/image/upload/f_auto,q_auto/v1/mgstucson/judabg9vb8iglopwjo1e" alt="mgs" />
-              <TitleLogo title='MGS' caption='7' className='logomin' />
+        <div className="container">
+          <div className="logo">
+            <Link href="/" className="flex">
+              <img
+                src="https://res.cloudinary.com/dh4qhdszo/image/upload/f_auto,q_auto/v1/mgstucson/judabg9vb8iglopwjo1e"
+                alt="mgs"
+              />
+              <TitleLogo title="MGS" caption="7" className="logomin" />
             </Link>
           </div>
-          <nav className={open ? "openMenu" : "closeMenu"} onClick={() => setOpen(null)}>
-            <Link href='/' className={activeLink == "/" ? "activeLink" : "none"}>
+          <nav
+            className={open ? "openMenu" : "closeMenu"}
+            onClick={() => setOpen(null)}
+          >
+            <Link href="/" className={activeLink == "/" ? "activeLink" : ""}>
               Home
             </Link>
-            <Link href='/about' className={activeLink == "/about" ? "activeLink" : "none"}>
+            <Link
+              href="/about"
+              className={activeLink == "/about" ? "activeLink" : ""}
+            >
               About Us
             </Link>
-            <Link href='/team' className={activeLink == "/team" ? "activeLink" : "none"}>
+            <Link
+              href="/team"
+              className={activeLink == "/team" ? "activeLink" : ""}
+            >
               Team
             </Link>
-            <Link href='/services' className={activeLink == "/services" ? "activeLink" : "none"}>
+            <Link
+              href="/services"
+              className={activeLink == "/services" ? "activeLink" : ""}
+            >
               Services
             </Link>
-            <Link href='/projects' className={activeLink == "/projects" ? "activeLink" : "none"}>
+            <Link
+              href="/projects"
+              className={activeLink == "/projects" ? "activeLink" : ""}
+            >
               Projects
             </Link>
-            <Link href='/blogs' className={activeLink == "/blogs" ? "activeLink" : "none"}>
+            <Link
+              href="/blogs"
+              className={activeLink == "/blogs" ? "activeLink" : ""}
+            >
               Blog
             </Link>
-            <Link href='/contact' className={activeLink == "/contact" ? "activeLink" : "none"}>
+            <Link
+              href="/contact"
+              className={activeLink == "/contact" ? "activeLink" : ""}
+            >
               Contact
             </Link>
-            <button className='button-primary'>book a consultation</button>
+            <button className="button-primary">book a consultation</button>
           </nav>
-          <button onClick={() => setOpen(!open)}>{open ? <AiOutlineClose size={25} /> : <RiMenu4Line size={25} />}</button>
+          <button className="menu-toggle">
+            <Hamburger
+              duration={0.8}
+              color="#ffe"
+              onToggle={handleMenuToggle}
+            />
+          </button>
         </div>
+        <AnimatePresence>
+          {open && (
+            <motion.div
+              className="blur-background active"
+              initial={{ opacity: 0, y: "-100%" }}
+              animate={{ opacity: 1,y: 0 }}
+              exit={{ opacity: 0, y: "-100%" }}
+              transition={{ duration: 0.5 }}
+            >
+              <div>
+                <Link
+                  href="/"
+                  onClick={handleMenuToggle}
+                  className={activeLink == "/" ? "activeLink item" : "item"}
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/about"
+                  onClick={handleMenuToggle}
+                  className={activeLink == "/about" ? "activeLink item" : "item"}
+                >
+                  About Us
+                </Link>
+                <Link
+                  href="/team"
+                  onClick={handleMenuToggle}
+                  className={activeLink == "/team" ? "activeLink item" : "item"}
+                >
+                  Team
+                </Link>
+                <Link
+                  href="/services"
+                  onClick={handleMenuToggle}
+                  className={
+                    activeLink == "/services" ? "activeLink item" : "item"
+                  }
+                >
+                  Services
+                </Link>
+                <Link
+                  href="/projects"
+                  onClick={handleMenuToggle}
+                  className={
+                    activeLink == "/projects" ? "activeLink item" : "item"
+                  }
+                >
+                  Projects
+                </Link>
+                <Link
+                  href="/blogs"
+                  onClick={handleMenuToggle}
+                  className={activeLink == "/blogs" ? "activeLink item" : "item"}
+                >
+                  Blog
+                </Link>
+                <Link
+                  href="/contact"
+                  onClick={handleMenuToggle}
+                  className={
+                    activeLink == "/contact" ? "activeLink item" : "item"
+                  }
+                >
+                  Contact
+                </Link>
+              </div>
+              <button className="button-primary">book a consultation</button>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </header>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
