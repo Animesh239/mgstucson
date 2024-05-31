@@ -18,6 +18,16 @@
   }
 }
 
+@media screen and (max-width: 800px){
+  .logobg {
+    font-size: $xll;
+    -webkit-text-stroke: 1px white;
+    span {
+      font-size: 300px;
+    }
+  }
+}
+
 .logo{
   img{
     width:56px ;
