@@ -41,6 +41,15 @@ const Testimonial = () => {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
         breakpoint: 800,
         settings: {
           slidesToShow: 1,
@@ -67,7 +76,7 @@ const Testimonial = () => {
             <TitleSm title='WHAT CLIENTS SAY ABOUT OUR WORK' />
           </div>
           <div className='cards'>
-            <Slider {...settings}>
+            <Slider {...settings} >
               {testimonial.map((user) => (
                 <div key={user.projectId}>
                   <div className='card'>

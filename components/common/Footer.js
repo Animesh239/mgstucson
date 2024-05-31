@@ -93,11 +93,11 @@ const Footer = () => {
             <div className='text'>
               <span>© 2024 MGS. ALL RIGHTS RESERVED.</span>
             </div>
-            <div className='connect'>
+            {/* <div className='connect'>
               <span>Made with 💜</span>
               <span> &nbsp; | &nbsp; </span>
               <span>Team MGS Intern</span>
-            </div>
+            </div> */}
           </div>
         </div>
       </footer>

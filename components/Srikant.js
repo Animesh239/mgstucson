@@ -10,7 +10,7 @@ const Srikant = () => {
           </div>
 
           <div className='content flex1'>
-            <div className='left w-60 py'>
+            <div className='left w-60 py-1'>
               <TitleSa title='Dr. Srikant Annavarapu is an SME Registered Member and is recognised as a Qualified Person (NI 43-101), Competent Person (JORC) and Registered Competent Person (NACRI).' />
               <p className='desc-p'>Dr. Srikant Annavarapu has 40 years of experience in mining and geotechnical engineering, working in India, the USA, and Indonesia. He specializes in underground and surface mining methods, ground stabilization, instrumentation, monitoring, and analysis. His expertise spans geotechnical engineering, mine design, and planning, with a strong focus on safety and cost-effectiveness.</p>
               <div className='grid-3'>

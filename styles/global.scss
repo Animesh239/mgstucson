@@ -72,6 +72,17 @@
   }
 }
 
+.hero-content.grid-4{
+  .box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h3{
+      text-align: center;
+    }
+  }
+}
+
 @media screen and (max-width: 800px) {
   .hero-sec {
     &::before {
@@ -248,12 +259,12 @@
   align-items: center;
   flex-direction: column;
   iframe {
-    width: 60%;
+    width: 100%;
     border-radius: 10px;
   }
   span {
     margin-top: 1rem;
-    width: 75%;
+    width: 90%;
     font-size: medium;
     color: #9c9b9b;
     text-align: center;
@@ -309,6 +320,13 @@ footer {
     background-position: center;
     z-index: -1;
   }
+}
+
+@media screen and (max-width: 800px) {
+  footer {
+    text-align: center;
+  }
+  
 }
 
 .error {
