@@ -7,11 +7,45 @@ import Testimonial from "@/components/Testimonial";
 import { Title, TitleLogo, TitleSm } from "@/components/common/Title";
 import { BlogCard, Brand } from "@/components/router";
 import React from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+// Animation variants
+const variants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 }
+};
+
+const RevealOnScroll = ({ children, className }) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ threshold: 0.1 });
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
+  return (
+    <motion.div
+      ref={ref}
+      className={className}
+      initial="hidden"
+      animate={controls}
+      variants={variants}
+      transition={{ duration: 0.5 }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 const Hero = () => {
   return (
     <>
-      <section className="hero">
+      <RevealOnScroll className="hero">
         <div className="container">
           <TitleLogo
             title="Master Geotech Services Pvt Ltd"
@@ -19,15 +53,14 @@ const Hero = () => {
             className="logobg"
           />
           <h1 className="hero-title">Providing Innovative Solutions</h1>
-
           <div className="sub-heading">
             <TitleSm title="CONSULTING" /> <span>.</span>
             <TitleSm title="EDUCATION & TRAINING" /> <span>.</span>
             <TitleSm title="AUTOMATION" />
           </div>
         </div>
-      </section>
-      <section className="hero-sec">
+      </RevealOnScroll>
+      <RevealOnScroll className="hero-sec">
         <div className="container">
           <div className="heading-title">
             <Title title="Maximize yield, minimize risk. Your complete mining solution." />
@@ -57,18 +90,31 @@ const Hero = () => {
             ))}
           </div>
         </div>
-      </section>
-      <Srikant />
-      <Expertise />
-      <Banner />
-      <Testimonial />
-      <Projects />
-      <Brand />
-
-      <div className="text-center">
+      </RevealOnScroll>
+      <RevealOnScroll>
+        <Srikant />
+      </RevealOnScroll>
+      <RevealOnScroll>
+        <Expertise />
+      </RevealOnScroll>
+      <RevealOnScroll>
+        <Banner />
+      </RevealOnScroll>
+      <RevealOnScroll>
+        <Testimonial />
+      </RevealOnScroll>
+      <RevealOnScroll>
+        <Projects />
+      </RevealOnScroll>
+      <RevealOnScroll>
+        <Brand />
+      </RevealOnScroll>
+      <RevealOnScroll className="text-center">
         <Title title="Latest news & articles" />
-      </div>
-      <BlogCard />
+      </RevealOnScroll>
+      <RevealOnScroll>
+        <BlogCard />
+      </RevealOnScroll>
     </>
   );
 };

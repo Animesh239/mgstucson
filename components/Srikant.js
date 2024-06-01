@@ -3,7 +3,7 @@ import { Title, TitleSa } from "@/components/common/Title"
 const Srikant = () => {
   return (
     <>
-      <section className='agency bg-top'>
+      <section className='agency'>
         <div className='container'>
           <div className='heading-title'>
             <Title title='Dr. Srikant Annavarapu' className='title-sa' />
