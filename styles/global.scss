@@ -31,7 +31,7 @@
     display: flex;
     justify-content: center;
     .titleSm {
-      margin: 0 $xl-3;
+      margin: 0 $xl;
       font-weight: 500;
     }
     span {
@@ -49,7 +49,7 @@
     }
     .sub-heading {
       display: flex;
-      font-size: 10px;
+      font-size: 8px;
       align-items: baseline;
       span {
         font-size: 70px;
