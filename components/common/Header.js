@@ -22,6 +22,7 @@ const Header = () => {
     setOpen(false);
   };
 
+
   return (
     <>
       <header>
@@ -78,7 +79,13 @@ const Header = () => {
             >
               Contact
             </Link>
-            <button className="button-primary">book a consultation</button>
+            <Link
+              href="/auth/login"
+              className='button-primary'
+              onClick={handleLinkClick}
+            >
+              Login
+            </Link>
           </nav>
           <button className="menu-toggle">
             <Hamburger
@@ -155,7 +162,13 @@ const Header = () => {
                   Contact
                 </Link>
               </div>
-              <button className="button-primary">book a consultation</button>
+              <Link
+                  href="/auth/login"
+                  onClick={handleLinkClick}
+                  className='button-primary'
+                >
+                 Login
+                </Link>
             </motion.div>
           )}
         </AnimatePresence>
