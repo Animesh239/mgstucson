@@ -35,7 +35,7 @@ const RevealOnScroll = ({ children, className }) => {
       initial="hidden"
       animate={controls}
       variants={variants}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.3 }}
     >
       {children}
     </motion.div>

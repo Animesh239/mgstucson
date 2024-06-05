@@ -72,12 +72,12 @@
   }
 }
 
-.hero-content.grid-4{
-  .box{
+.hero-content.grid-4 {
+  .box {
     display: flex;
     align-items: center;
     flex-direction: column;
-    h3{
+    h3 {
       text-align: center;
     }
   }
@@ -95,7 +95,7 @@
       z-index: -1;
       background-color: $dark;
       filter: blur(0px);
-      box-shadow: 0px 0px 100px 100px $dark;  
+      box-shadow: 0px 0px 100px 100px $dark;
     }
   }
 }
@@ -107,11 +107,95 @@
   }
 }
 
-.container.center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid #888;
+// login
+.login-form {
+  .mb-5 {
+    margin-bottom: 1.25rem;
+  }
+
+  .block {
+    display: block;
+  }
+
+  .input-field {
+    background-color: #f9fafb; /* gray-50 */
+    border: 1px solid #d1d5db; /* gray-300 */
+    color: #111827; /* gray-900 */
+    font-size: 0.875rem; /* text-sm */
+    border-radius: 0.5rem; /* rounded-lg */
+    padding: 0.625rem; /* p-2.5 */
+    width: 100%;
+    transition: border-color 0.3s, box-shadow 0.3s;
+
+    &:focus {
+      border-color: #3b82f6; /* blue-500 */
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3); /* ring-3 ring-blue-300 */
+      outline: none;
+    }
+
+    &.dark {
+      background-color: #374151; /* gray-700 */
+      border-color: #4b5563; /* gray-600 */
+      color: #e5e7eb; /* gray-400 */
+    }
+  }
+
+  .checkbox {
+    width: 1rem; /* w-4 */
+    height: 1rem; /* h-4 */
+    border: 1px solid #d1d5db; /* border-gray-300 */
+    border-radius: 0.25rem; /* rounded */
+    background-color: #f9fafb; /* bg-gray-50 */
+    transition: box-shadow 0.3s;
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3); /* focus:ring-3 focus:ring-blue-300 */
+      outline: none;
+    }
+
+    &.dark {
+      background-color: #374151; /* dark:bg-gray-700 */
+      border-color: #4b5563; /* dark:border-gray-600 */
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3); /* dark:focus:ring-blue-600 */
+    }
+  }
+
+  .submit-button {
+    color: #ffffff; /* text-white */
+    background-color: #1d4ed8; /* bg-blue-700 */
+    padding: 0.625rem 1.25rem; /* px-5 py-2.5 */
+    font-size: 0.875rem; /* text-sm */
+    border-radius: 0.5rem; /* rounded-lg */
+    width: 100%; /* w-full */
+    text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #1e40af; /* hover:bg-blue-800 */
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3); /* focus:ring-4 focus:ring-blue-300 */
+      outline: none;
+    }
+
+    &.dark {
+      background-color: #2563eb; /* dark:bg-blue-600 */
+      &:hover {
+        background-color: #1d4ed8; /* dark:hover:bg-blue-700 */
+      }
+      &:focus {
+        box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.3); /* dark:focus:ring-blue-800 */
+      }
+    }
+  }
+
+  .error {
+    color: red;
+    font-size: 0.75rem; /* text-xs */
+    margin-top: 0.25rem; /* mt-1 */
+  }
 }
 
 //banner
@@ -251,7 +335,6 @@
       }
     }
   }
-  
 }
 
 //showcase
@@ -364,7 +447,6 @@ footer {
   footer {
     text-align: center;
   }
-  
 }
 
 .error {
@@ -387,7 +469,7 @@ footer {
     top: 0;
     left: 0;
     width: 100% !important;
-    height: 60vh;
+    height: 30vh;
     background-image: url("../assets/images/blurfooter-min.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -480,7 +562,64 @@ footer {
   }
 }
 
-@media  screen and (max-width: 800px){
+.login {
+  .content {
+    display: flex;
+    justify-content: center;
+    min-width: 100%;
+    .right {
+      border-radius: 50px 0 50px 0;
+      padding: $xll;
+      background-color: #171e20;
+      form {
+        margin-top: $xll;
+      }
+      .inputs {
+        margin-bottom: $xl-6;
+        span {
+          text-transform: uppercase;
+        }
+        input {
+          width: 100%;
+          background-color: $white;
+          padding: 15px;
+          margin-top: $sm;
+          color: $dark;
+          border: 2px solid transparent;
+          border-radius: 5px;
+          transition: border-color 0.3s, box-shadow 0.3s;
+
+          &:focus {
+            border-color: $indigo; /* Change to the color you want for the border glow */
+            box-shadow: 0 0 10px $green; /* Adjust the glow effect */
+            outline: none;
+          }
+        }
+      }
+      .show-password {
+        display: flex;
+        align-items: center;
+        margin-bottom: $xl-6;
+
+        input[type="checkbox"] {
+          margin-right: $sm;
+        }
+        
+        label {
+          color: $white;
+          cursor: pointer;
+        }
+      }
+      button {
+        width: 100%;
+        padding: 18px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 800px) {
   .contact {
     .left {
       padding-right: 0;
@@ -541,9 +680,8 @@ footer {
 // project-detail
 .project {
   margin-bottom: 2rem;
-  span{
+  span {
     color: #888;
-  
   }
 }
 

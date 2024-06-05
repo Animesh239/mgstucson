@@ -1,8 +1,8 @@
 // login page
 
 import React from 'react';
-import { LoginForm } from '@/components/auth/LoginForm';
 import Head from 'next/head';
+import LoginForm from '@/sections/Login';
 
 const Login = () => {
 
