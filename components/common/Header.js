@@ -10,7 +10,7 @@ import { useUser } from "./UserContext"; // Import the custom hook
 const Header = () => {
   const [activeLink, setActiveLink] = useState("");
   const [open, setOpen] = useState(false);
-  const { user } = useUser(); // Use the custom hook to access user data
+  const { user, logoutUser } = useUser(); // Use the custom hook to access user data and logoutUser
 
   const router = useRouter();
   useEffect(() => {
@@ -25,6 +25,11 @@ const Header = () => {
     setOpen(false);
   };
 
+  const handleLogout = () => {
+    logoutUser(); // Clear user data on logout
+    router.push("/auth/login");
+  };
+
   return (
     <header>
       <div className="container bg-top">
@@ -37,7 +42,10 @@ const Header = () => {
             <TitleLogo title="MGS" caption="7" className="logomin" />
           </Link>
         </div>
-        <nav className={open ? "openMenu" : "closeMenu"}>
+        <nav
+          className={open ? "openMenu" : "closeMenu"}
+          onClick={() => setOpen(null)}
+        >
           <Link href="/" className={activeLink === "/" ? "activeLink" : ""}>
             Home
           </Link>
@@ -60,7 +68,12 @@ const Header = () => {
             Contact
           </Link>
           {user ? (
-            <p>Welcome, {user.username}!</p>
+            <>
+              <p>Welcome, {user.username}!</p>
+              <button onClick={handleLogout} className="button-primary">
+                Logout
+              </button>
+            </>
           ) : (
             <Link href="/auth/login" className="button-primary" onClick={handleLinkClick}>
               Login

@@ -14,7 +14,7 @@ const LoginForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [notification, setNotification] = useState("");
   const [goodCredentials, setGoodCredentials] = useState(false);
-  const { setUser } = useUser(); // Use the custom hook to access setUser
+  const { loginUser } = useUser(); // Use the custom hook to access loginUser
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -38,6 +38,7 @@ const LoginForm = () => {
     const data = await response.json();
 
     try {
+      // match credentials
       const match = data.find(
         (user) =>
           user.email === formData.email && user.password === formData.password
@@ -45,7 +46,7 @@ const LoginForm = () => {
 
       if (match) {
         setGoodCredentials(true);
-        setUser(match); // Set the user in the global context
+        loginUser(match); // Use loginUser to store the user data in context and localStorage
         setNotification("Login successful! Redirecting to Dashboard...");
         setFormData({
           username: "",
@@ -79,7 +80,7 @@ const LoginForm = () => {
         <div className="heading-title">
           <Title title="Let's get you Logged In!" className="title-bg" />
         </div>
-        <div className="content py-1 ">
+        <div className="content py-1">
           <div className="right w-70">
             <form onSubmit={handleSubmit}>
               <div className="grid-1">
@@ -157,3 +158,4 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
+
