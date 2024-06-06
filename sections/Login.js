@@ -1,14 +1,18 @@
 import { useState } from "react";
 import { Title } from "../components/common/Title";
+import useSWR from "swr";
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
+    username: "",
     email: "",
     password: "",
+    role: "USER",
   });
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [notification, setNotification] = useState("");
+  const fetcher = (url) => fetch(url).then((res) => res.json());
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,23 +33,19 @@ const LoginForm = () => {
     setNotification("");
 
     try {
-      const response = await fetch("/api/user/route", {
-        method: "POST",
-        body: JSON.stringify(formData),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const { data, error } = useSWR("/api/auth", fetcher);
 
-      if (response.ok) {
-        console.log(formData)
+      if (!error && data) {
+        console.log(data);
         setNotification("Login successful! Redirecting to Dashboard...");
         setFormData({
+          username: "",
           email: "",
           password: "",
+          role: "USER",
         });
       } else {
-        setNotification("Failed to Login. Please try again.");
+        setNotification("Invalid credentials. Please try again.");
       }
     } catch (error) {
       console.error(error);
@@ -66,7 +66,18 @@ const LoginForm = () => {
             <div className="right w-70">
               <form onSubmit={handleSubmit}>
                 <div className="grid-1">
-                  
+                  <div className="inputs">
+                    <span>Username</span>
+                    <input
+                      type="text"
+                      name="username"
+                      value={formData.username}
+                      onChange={handleChange}
+                      required
+                      pattern="[a-z]*"
+                      title="Username must be lowercase letters only"
+                    />
+                  </div>
                   <div className="inputs">
                     <span>Email</span>
                     <input
@@ -87,9 +98,8 @@ const LoginForm = () => {
                       required
                     />
                   </div>
-                </div>
-
-                <div className="show-password">
+                  <div className="grid-2">
+                  <div className="show-password">
                   <input
                     type="checkbox"
                     id="show-password"
@@ -98,6 +108,21 @@ const LoginForm = () => {
                   />
                   <label htmlFor="show-password">Show Password</label>
                 </div>
+                  <div className="inputs">
+                    <span>ACCESS</span>
+                    <select
+                      name="role"
+                      value={formData.role}
+                      onChange={handleChange}
+                      required
+                    >
+                      <option value="USER">User</option>
+                      <option value="ADMIN">Admin</option>
+                    </select>
+                  </div></div>
+                </div>
+
+                
 
                 <button
                   className="button-primary"

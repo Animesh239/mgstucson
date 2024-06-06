@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@prisma/client": "^5.15.0",
+    "@prisma/extension-accelerate": "^1.1.0",
     "axios": "^1.7.2",
     "framer-motion": "^11.2.10",
     "hamburger-react": "^2.5.0",
@@ -21,9 +22,12 @@
     "react-intersection-observer": "^9.10.2",
     "react-slick": "^0.29.0",
     "sass": "^1.61.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "swr": "^2.2.5"
   },
   "devDependencies": {
-    "prisma": "^5.15.0"
+    "node-polyfill-webpack-plugin": "^4.0.0",
+    "prisma": "^5.15.0",
+    "webpack-node-externals": "^3.0.0"
   }
 }

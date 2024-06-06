@@ -2,7 +2,9 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./*"],
-      "@components/*": ["./components/*"]
+      "@components/*": ["./components/*"],
+      "@pages/*": ["./pages/*"],
+      "@api/*": ["./pages/api/*"] // Add this line to include the 'auth.js' file
     }
   }
 }

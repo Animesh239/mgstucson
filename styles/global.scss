@@ -594,6 +594,18 @@ footer {
             box-shadow: 0 0 10px $green; /* Adjust the glow effect */
             outline: none;
           }
+          
+        }
+        select{
+          margin-left: 1rem;
+          padding: 8px;
+          width: 60%;
+          border-radius: 2rem;
+          &:focus {
+            border-color: $indigo; /* Change to the color you want for the border glow */
+            box-shadow: 0 0 10px $green; /* Adjust the glow effect */
+            outline: none;
+          }
         }
       }
       .show-password {
