@@ -25,34 +25,43 @@ export default async function handler(req, res) {
     }
   }
 
-  if(req.method === "POST"){
-    try{
-      const body = await req.json();
-      const { email, password, username, role } = body;
+//   if(req.method === "POST"){
+//     try{
+//       const body = await req.json();
+//       const { email, password, username, role } = body;
       
-      // check if email already exists
-      const existingUser = await db.user.findUnique({
-        where: { email : email }, 
-      });
+//       // check if email already exists
+//       const existingUser = await db.user.findUnique({
+//         where: { email : email }, 
+//       });
      
-      if (existingUser) {
-        return NextResponse.redirect('/login').status(302) ;
-      }
+//       if (existingUser) {
+//         return NextResponse.json({message : 'User with this email already Exists'}).status(302) ;
+//       }
 
-      // new user
-      const newUser = await db.user.create({
-        data: {
-          email,
-          password,
-          username,
-          role: role || 'USER',
-        },
-      }); 
-      return NextResponse.json(body, newUser);
+//       // check if username already exists
+//         const existingUsername = await db.user.findUnique({
+//             where: { username : username }, 
+//         });
+
+//         if (existingUsername) {
+//             return NextResponse.json({message : 'Username already used'}).status(302) ;
+//         }
+
+//       // new user
+//       const newUser = await db.user.create({
+//         data: {
+//           email,
+//           password,
+//           username,
+//           role: role || 'USER',
+//         },
+//       }); 
+//       res.status(200).json(newUser);
      
-     }catch(err){
-      console.error(err);
-      return NextResponse.error(new Error('An error occurred. Please try again.'));
-     }
-  }
+//      }catch(err){
+//       console.error(err);
+//       return NextResponse.error(new Error('An error occurred. Please try again.'));
+//      }
+//   }
 }

@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Title } from "../components/common/Title";
-import useSWR from "swr";
+import { UserContext } from "@/components/common/UserContext";
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
@@ -12,7 +12,8 @@ const LoginForm = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [notification, setNotification] = useState("");
-  const fetcher = (url) => fetch(url).then((res) => res.json());
+  const [goodCredentials, setGoodCredentials] = useState(false);
+  const { user, setUser } = useContext(UserContext);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -32,11 +33,20 @@ const LoginForm = () => {
     setIsLoading(true);
     setNotification("");
 
-    try {
-      const { data, error } = useSWR("/api/auth", fetcher);
+    const response = await fetch("/api/auth");
+    const data = await response.json();
+    // console.log(data[0]); {id: 1, email: 'animeshbarik239@gmail.com', username: 'animesh', password: 'Animesh@1234', role: 'USER', …}
 
-      if (!error && data) {
-        console.log(data);
+    try {
+      // match credentials
+      const match = data.find(
+        (user) =>
+          user.email === formData.email && user.password === formData.password
+      );
+
+      if (match) {
+        setGoodCredentials(true);
+        setUser(data[0]);
         setNotification("Login successful! Redirecting to Dashboard...");
         setFormData({
           username: "",
@@ -45,6 +55,8 @@ const LoginForm = () => {
           role: "USER",
         });
       } else {
+        setGoodCredentials(false);
+        setUser(null);
         setNotification("Invalid credentials. Please try again.");
       }
     } catch (error) {
@@ -54,6 +66,14 @@ const LoginForm = () => {
       setIsLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (goodCredentials) {
+      setTimeout(() => {
+        // window.location.href = "/";
+      }, 500);
+    }
+  }, [goodCredentials]);
 
   return (
     <>
@@ -99,30 +119,29 @@ const LoginForm = () => {
                     />
                   </div>
                   <div className="grid-2">
-                  <div className="show-password">
-                  <input
-                    type="checkbox"
-                    id="show-password"
-                    checked={isPasswordVisible}
-                    onChange={handlePasswordVisibility}
-                  />
-                  <label htmlFor="show-password">Show Password</label>
+                    <div className="show-password">
+                      <input
+                        type="checkbox"
+                        id="show-password"
+                        checked={isPasswordVisible}
+                        onChange={handlePasswordVisibility}
+                      />
+                      <label htmlFor="show-password">Show Password</label>
+                    </div>
+                    <div className="inputs">
+                      <span>ACCESS</span>
+                      <select
+                        name="role"
+                        value={formData.role}
+                        onChange={handleChange}
+                        required
+                      >
+                        <option value="USER">User</option>
+                        <option value="ADMIN">Admin</option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
-                  <div className="inputs">
-                    <span>ACCESS</span>
-                    <select
-                      name="role"
-                      value={formData.role}
-                      onChange={handleChange}
-                      required
-                    >
-                      <option value="USER">User</option>
-                      <option value="ADMIN">Admin</option>
-                    </select>
-                  </div></div>
-                </div>
-
-                
 
                 <button
                   className="button-primary"
