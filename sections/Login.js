@@ -1,6 +1,7 @@
-import { useContext, useEffect, useState } from "react";
+// components/LoginForm.js
+import { useEffect, useState } from "react";
 import { Title } from "../components/common/Title";
-import { UserContext } from "@/components/common/UserContext";
+import { useUser } from "@/components/common/UserContext"; // Import the custom hook
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
@@ -13,7 +14,7 @@ const LoginForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [notification, setNotification] = useState("");
   const [goodCredentials, setGoodCredentials] = useState(false);
-  const { user, setUser } = useContext(UserContext);
+  const { setUser } = useUser(); // Use the custom hook to access setUser
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,10 +36,8 @@ const LoginForm = () => {
 
     const response = await fetch("/api/auth");
     const data = await response.json();
-    // console.log(data[0]); {id: 1, email: 'animeshbarik239@gmail.com', username: 'animesh', password: 'Animesh@1234', role: 'USER', …}
 
     try {
-      // match credentials
       const match = data.find(
         (user) =>
           user.email === formData.email && user.password === formData.password
@@ -46,7 +45,7 @@ const LoginForm = () => {
 
       if (match) {
         setGoodCredentials(true);
-        setUser(data[0]);
+        setUser(match); // Set the user in the global context
         setNotification("Login successful! Redirecting to Dashboard...");
         setFormData({
           username: "",
@@ -56,7 +55,6 @@ const LoginForm = () => {
         });
       } else {
         setGoodCredentials(false);
-        setUser(null);
         setNotification("Invalid credentials. Please try again.");
       }
     } catch (error) {
@@ -76,87 +74,85 @@ const LoginForm = () => {
   }, [goodCredentials]);
 
   return (
-    <>
-      <section className="login">
-        <div className="container">
-          <div className="heading-title">
-            <Title title="Let's get you Logged In!" className="title-bg" />
-          </div>
-          <div className="content py-1 ">
-            <div className="right w-70">
-              <form onSubmit={handleSubmit}>
-                <div className="grid-1">
-                  <div className="inputs">
-                    <span>Username</span>
+    <section className="login">
+      <div className="container">
+        <div className="heading-title">
+          <Title title="Let's get you Logged In!" className="title-bg" />
+        </div>
+        <div className="content py-1 ">
+          <div className="right w-70">
+            <form onSubmit={handleSubmit}>
+              <div className="grid-1">
+                <div className="inputs">
+                  <span>Username</span>
+                  <input
+                    type="text"
+                    name="username"
+                    value={formData.username}
+                    onChange={handleChange}
+                    required
+                    pattern="[a-z]*"
+                    title="Username must be lowercase letters only"
+                  />
+                </div>
+                <div className="inputs">
+                  <span>Email</span>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="inputs">
+                  <span>Password</span>
+                  <input
+                    type={isPasswordVisible ? "text" : "password"}
+                    name="password"
+                    value={formData.password}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="grid-2">
+                  <div className="show-password">
                     <input
-                      type="text"
-                      name="username"
-                      value={formData.username}
-                      onChange={handleChange}
-                      required
-                      pattern="[a-z]*"
-                      title="Username must be lowercase letters only"
+                      type="checkbox"
+                      id="show-password"
+                      checked={isPasswordVisible}
+                      onChange={handlePasswordVisibility}
                     />
+                    <label htmlFor="show-password">Show Password</label>
                   </div>
                   <div className="inputs">
-                    <span>Email</span>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
+                    <span>ACCESS</span>
+                    <select
+                      name="role"
+                      value={formData.role}
                       onChange={handleChange}
                       required
-                    />
-                  </div>
-                  <div className="inputs">
-                    <span>Password</span>
-                    <input
-                      type={isPasswordVisible ? "text" : "password"}
-                      name="password"
-                      value={formData.password}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                  <div className="grid-2">
-                    <div className="show-password">
-                      <input
-                        type="checkbox"
-                        id="show-password"
-                        checked={isPasswordVisible}
-                        onChange={handlePasswordVisibility}
-                      />
-                      <label htmlFor="show-password">Show Password</label>
-                    </div>
-                    <div className="inputs">
-                      <span>ACCESS</span>
-                      <select
-                        name="role"
-                        value={formData.role}
-                        onChange={handleChange}
-                        required
-                      >
-                        <option value="USER">User</option>
-                        <option value="ADMIN">Admin</option>
-                      </select>
-                    </div>
+                    >
+                      <option value="USER">User</option>
+                      <option value="ADMIN">Admin</option>
+                    </select>
                   </div>
                 </div>
+              </div>
 
-                <button
-                  className="button-primary"
-                  type="submit"
-                  disabled={isLoading}
-                >
-                  {isLoading ? "Authenticating..." : "Login"}
-                </button>
-              </form>
-              {notification && <p className="notification">{notification}</p>}
-            </div>
+              <button
+                className="button-primary"
+                type="submit"
+                disabled={isLoading}
+              >
+                {isLoading ? "Authenticating..." : "Login"}
+              </button>
+            </form>
+            {notification && <p className="notification">{notification}</p>}
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
