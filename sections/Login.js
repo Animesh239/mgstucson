@@ -29,7 +29,7 @@ const LoginForm = () => {
     setNotification("");
 
     try {
-      const response = await fetch("/api/sendEmail", {
+      const response = await fetch("/api/user/route", {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {
@@ -38,7 +38,8 @@ const LoginForm = () => {
       });
 
       if (response.ok) {
-        setNotification("Message sent successfully!");
+        console.log(formData)
+        setNotification("Login successful! Redirecting to Dashboard...");
         setFormData({
           email: "",
           password: "",
