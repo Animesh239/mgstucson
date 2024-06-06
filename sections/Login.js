@@ -69,7 +69,7 @@ const LoginForm = () => {
   useEffect(() => {
     if (goodCredentials) {
       setTimeout(() => {
-        // window.location.href = "/";
+        window.location.href = "/";
       }, 500);
     }
   }, [goodCredentials]);

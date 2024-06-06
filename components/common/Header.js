@@ -68,12 +68,9 @@ const Header = () => {
             Contact
           </Link>
           {user ? (
-            <>
-              <p>Welcome, {user.username}!</p>
-              <button onClick={handleLogout} className="button-primary">
-                Logout
-              </button>
-            </>
+            <button className="button-primary" onClick={handleLogout}>
+             {user.username} : {user.role} 
+            </button>
           ) : (
             <Link href="/auth/login" className="button-primary" onClick={handleLinkClick}>
               Login
